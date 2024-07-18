@@ -1,20 +1,28 @@
 public class Conta implements IConta{
-  // atributos
-  private int agencia;
-  private int numero;
-  private int saldo;
+
+  protected static final int AGENCIA_PADRAO = 0;
+  private static int SEQUENCIAL = 1;
+
+  protected int agencia;
+  protected int numero;
+  protected int saldo;
+
+  public Conta() {
+    this.agencia = AGENCIA_PADRAO;
+    this.numero = SEQUENCIAL++;
+  }
 
   @Override
   public void sacar(double valor) {
-    // TODO Auto-generated method stub
+
   }
   @Override
   public void depositar(double valor) {
-    // TODO Auto-generated method stub
+
   }
   @Override
   public void transferir(double valor, Conta destino) {
-    // TODO Auto-generated method stub
+
   }
 
   public int getAgencia() {
